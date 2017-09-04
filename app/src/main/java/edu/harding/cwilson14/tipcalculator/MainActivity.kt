@@ -35,14 +35,12 @@ class MainActivity : AppCompatActivity() {
     fun calculate() {
         try {
             // Calculate the answers.
-            val bill = inputBill.text.toString().toFloat()
-            val tipAmount = bill * inputTipPercent.text.toString().toFloat()/100
+            val tipCalculator = TipCalculator(inputBill.text.toString().toFloat(), inputTipPercent.text.toString().toFloat()/100)
             val numberFormat = NumberFormat.getCurrencyInstance()
-            val total = bill + tipAmount
 
             // Update the labels with the calculations.
-            labelTipAmount.text = numberFormat.format(tipAmount)
-            labelTotal.text = numberFormat.format(total)
+            labelTipAmount.text = numberFormat.format(tipCalculator.tipAmount)
+            labelTotal.text = numberFormat.format(tipCalculator.total)
 
         } catch (e: NumberFormatException) {
             // Numbers failed to parse.
