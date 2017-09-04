@@ -4,4 +4,5 @@
     <string name="labelTipPercent">Tip Percent</string>
     <string name="labelTotal">Total</string>
     <string name="labelTipAmount">Tip Amount</string>
+    <string name="numberFormatToast">Enter numbers for bill and tip percent.</string>
 </resources>

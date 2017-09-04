@@ -7,31 +7,14 @@ package edu.harding.cwilson14.tipcalculator
 class TipCalculatorModel(bill: Float = 0F, tipPercent: Float = 0F) {
 
     var bill: Float=bill
-        set(value) {
-            field = value
-            updateCalculations()
-        }
-
     var tipPercent: Float = tipPercent
-        set(value) {
-            field = value
-            updateCalculations()
-        }
-
-    var tipAmount: Float = 0F
+    var tipAmount: Float = bill * tipPercent
         private set
-
     var total: Float = bill + tipAmount
         private set
 
     init {
         this.bill = bill
         this.tipPercent = tipPercent
-        updateCalculations()
-    }
-
-    private fun updateCalculations() {
-        tipAmount = bill * tipPercent
-        total = bill + tipAmount
     }
 }

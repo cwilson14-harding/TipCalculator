@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         } catch (e: NumberFormatException) {
             // Numbers failed to parse.
-            Toast.makeText(this, "Enter numbers for bill and tip percent.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.numberFormatToast), Toast.LENGTH_SHORT).show()
             labelTipAmount.text = ""
             labelTotal.text = ""
         }
