@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     fun calculate() {
         try {
             // Calculate the answers.
-            val tipCalculator = TipCalculator(inputBill.text.toString().toFloat(), inputTipPercent.text.toString().toFloat()/100)
+            val tipCalculator = TipCalculatorModel(inputBill.text.toString().toFloat(), inputTipPercent.text.toString().toFloat()/100)
             val numberFormat = NumberFormat.getCurrencyInstance()
 
             // Update the labels with the calculations.

@@ -4,7 +4,7 @@ package edu.harding.cwilson14.tipcalculator
  * Created by cwilson14 on 9/4/2017.
  */
 
-class TipCalculator(bill: Float = 0F, tipPercent: Float = 0F) {
+class TipCalculatorModel(bill: Float = 0F, tipPercent: Float = 0F) {
 
     var bill: Float=bill
         set(value) {
